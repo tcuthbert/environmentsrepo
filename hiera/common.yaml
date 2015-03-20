@@ -1,0 +1,24 @@
+---
+classes:
+ - 'profile::base'
+
+ntp::servers:
+  - time.iinet.net.au
+  - ntp.internode.on.au
+#sudo::sudoers:
+  #network_admin:
+    #ensure: present
+    #comment: "NOPSA network admin users."
+    #users:
+      #- tom
+      #- someguy
+    #hosts:
+      #- agent-node-green.empired.com
+    #runas:
+      #- root
+    #cmnds:
+      #- ALL
+    #tags:
+      #- NOPASSWD
+    #defaults:
+      #- 'env_keep += "SSH_AUTH_SOCK"'
