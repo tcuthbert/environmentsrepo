@@ -5,18 +5,18 @@ classes:
 ntp::servers:
   - time.iinet.net.au
   - ntp.internode.on.au
-sudo::sudoers:
-  network_admin:
-    ensure: present
-    comment: "network admin users."
-    users:
-      - tom
-      - someguy
-    runas:
-      - root
-    cmnds:
-      - ALL
-    tags:
-      - NOPASSWD
-    defaults:
-      - 'env_keep += "SSH_AUTH_SOCK"'
+#sudo::sudoers:
+  #network_admin:
+    #ensure: present
+    #comment: "network admin users."
+    #users:
+      #- tom
+      #- someguy
+    #runas:
+      #- root
+    #cmnds:
+      #- ALL
+    #tags:
+      #- NOPASSWD
+    #defaults:
+      #- 'env_keep += "SSH_AUTH_SOCK"'
