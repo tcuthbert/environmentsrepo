@@ -1,10 +1,15 @@
 class base::profiles::r10k_installation {
 
   class { 'r10k':
-    sources       => {
+    sources => {
       'puppet'    => {
         'remote'  => 'file:///vagrant/config/environmentsrepo',
         'basedir' => "${::settings::confdir}/environments",
+        'prefix'  => false,
+      },
+      'hiera'     => {
+        'remote'  => 'file:///vagrant/config/hierarepo',
+        'basedir' => "${::settings::confdir}/hiera",
         'prefix'  => false,
       }
     },
