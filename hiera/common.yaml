@@ -1,10 +1,12 @@
 ---
 classes:
  - 'profile::base'
+ - 'profile::r10k_installation'
 
 ntp::servers:
   - time.iinet.net.au
   - ntp.internode.on.au
+
 #sudo::sudoers:
   #network_admin:
     #ensure: present
