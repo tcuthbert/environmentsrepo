@@ -2,7 +2,7 @@ class base::profiles::r10k_installation {
   class { 'r10k':
     sources => {
       'puppet' => {
-        'remote'  => 'ssh://root@master-top.puppetdemo.local/vagrant/config/environmentsrepo',
+        'remote'  => 'file:///master-top.puppetdemo.local/vagrant/config/environmentsrepo',
         'basedir' => "${::settings::confdir}/environments",
         'prefix'  => false,
       }
