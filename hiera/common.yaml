@@ -6,6 +6,12 @@ ntp::servers:
   - time.iinet.net.au
   - ntp.internode.on.au
 
+r10k::sources::puppet:
+  remote:
+    - 'ssh://root@master-top.puppetdemo.local/vagrant/config/environmentsrepo'
+  prefix:
+    - false
+
 r10k::include_postrun_command: true
 
 #sudo::sudoers:
