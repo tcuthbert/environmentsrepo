@@ -1,9 +1,9 @@
 class base::profiles::r10k_installation {
-  include base::apps
 
   class { 'r10k':
-    sources => {
-      'puppet' => {
+    require       => Package["git"],
+    sources       => {
+      'puppet'    => {
         'remote'  => 'file:///vagrant/config/environmentsrepo',
         'basedir' => "${::settings::confdir}/environments",
         'prefix'  => false,
