@@ -1,6 +1,6 @@
 ---
 classes:
-  - 'base::profiles::ntp'
+  - 'site::base::profiles::ntp'
   #- 'profiles::r10k_installation'
 
 ntp::servers:
