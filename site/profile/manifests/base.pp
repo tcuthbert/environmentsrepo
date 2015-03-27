@@ -1,5 +1,4 @@
 class profile::base {
   class { '::ntp': }
-  #class { '::r10k': }
-  class { '::r10k::mcollective': }
+  class { 'r10k_installation': }
 }
