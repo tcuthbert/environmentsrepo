@@ -1,7 +1,6 @@
 ---
 classes:
  - 'profile::base'
- - 'profile::r10k_installation'
 
 ntp::servers:
   - time.iinet.net.au
