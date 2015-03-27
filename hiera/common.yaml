@@ -1,6 +1,7 @@
 ---
 classes:
-  - '::profiles::base'
+  - 'base::profiles::ntp'
+  - 'base::profiles::r10k_installation'
 
 ntp::servers:
   - time.iinet.net.au
@@ -12,7 +13,7 @@ ntp::servers:
 #  prefix:
 #    - false
 
-r10k::include_postrun_command: true
+#r10k::include_postrun_command: true
 
 #sudo::sudoers:
   #network_admin:

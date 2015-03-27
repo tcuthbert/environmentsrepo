@@ -1,4 +1,4 @@
-class profiles::base::r10k_installation {
+class base::profiles::r10k_installation {
   class { 'r10k':
     sources => {
       'puppet' => {
