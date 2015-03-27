@@ -1,5 +1,5 @@
 class base::profiles::r10k_installation {
-  require base::apps
+  include base::apps
 
   class { 'r10k':
     sources => {
