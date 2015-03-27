@@ -1,6 +1,6 @@
 ---
 classes:
- - 'profiles::base'
+  - '::profiles::base'
 
 ntp::servers:
   - time.iinet.net.au
