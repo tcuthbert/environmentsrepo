@@ -8,21 +8,19 @@ ntp::servers:
   - ntp.internode.on.au
 
 r10k::include_postrun_command: true
-
-#r10k::include_postrun_command: true
-
-#sudo::sudoers:
-  #network_admin:
-    #ensure: present
-    #comment: "network admin users."
-    #users:
-      #- tom
-      #- someguy
-    #runas:
-      #- root
-    #cmnds:
-      #- ALL
-    #tags:
-      #- NOPASSWD
-    #defaults:
-      #- 'env_keep += "SSH_AUTH_SOCK"'
+  
+sudo::sudoers:
+  network_admin:
+    ensure: present
+    comment: "network admin users."
+    users:
+      - tom
+      - someguy
+    runas:
+      - root
+    cmnds:
+      - ALL
+    tags:
+      - NOPASSWD
+    defaults:
+      - 'env_keep += "SSH_AUTH_SOCK"'
