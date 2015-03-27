@@ -1,4 +1,4 @@
-class { 'r10k':
+class { 'r10k_installation':
   sources => {
     'puppet' => {
       'remote'  => 'ssh://root@master-top/vagrant/config/environmentsrepo',
