@@ -1,7 +1,7 @@
 class { 'r10k':
   sources => {
     'puppet' => {
-      'remote'  => '/vagrant/config/environmentsrepo.git',
+      'remote'  => '/vagrant/config/environmentsrepo',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
     }
