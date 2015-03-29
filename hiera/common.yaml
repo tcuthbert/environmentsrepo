@@ -2,7 +2,6 @@
 classes:
   - 'base::apps'
   - 'base::profiles::ntp'
-  #- 'netops::profiles::sudoers'
 
 ntp::servers:
   - time.iinet.net.au
