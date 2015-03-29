@@ -10,12 +10,26 @@ ntp::servers:
 r10k::include_postrun_command: true
   
 sudo::sudoers:
-  users_network_admin:
+  network_admin:
     ensure: present
     comment: "network admin users."
     users:
       - tom
       - someguy
+    runas:
+      - root
+    cmnds:
+      - ALL
+    tags:
+      - NOPASSWD
+    defaults:
+      - 'env_keep += "SSH_AUTH_SOCK"'
+
+  security_admin:
+    ensure: present
+    comment: "network admin users."
+    users:
+      - dave
     runas:
       - root
     cmnds:
@@ -33,6 +47,20 @@ users_network_admins:
     groups:
       - wheel
     comment: Thomas Cuthbert
+    managehome: true
+    ssh_authorized_keys:
+      key:
+        type: 'ssh-rsa'
+        key:  'ZAAAB3NzaC1yc2EAAAADAQABAAACAQCqijBFikIUBQmn2WmXOx1VfSGwIMVzsInJat4mJN8kdM2Cn1Ss12X0CQnC9ABWjafvsoHqduiiQqCWbmy7U8v6e24O2EVztNdr96oI2ltDwURxIqrD4z5c3KhtMR6lCCNs2SQA4reOc/Gd+zAvSR6DafT7yTIHfbTRjUlOP1z+XWjcYU+eoKTW8VC3fTQBvuuhkUXmFUZiqWm6hl3axP3VoSRLftNswA7LlN8sMxmskLhLRaVaqspOR4WDoneFWIFNxeAty5uykd/cAUvRr0Sae8A498ehsKlh3uL9ZnWglut2NHOZRollbAWa39rD1huNK1+903CUzMwo78MiSkwXeG3cY13nNZs9Vnu9464uAeyuVuhwXAWl+H2J1TCXBo8gmhJk+st0B94L2WNzM4PVGfLDuSl/Shr0SA1Jr3Bq6CdS4o711LemANi9pmakaW1J+wGf26x/9UtgyH4XljXiKyY4TX41298hJT44AgI9cpo9Hvrpm9yKNElADtOXgPHmUbHZ/Vta6VGP2mXQ1MgKdIHFri4dIdYpR+Vp9d6GEo7CpiGHytLaON2nKDZcx8VLzY6C8uOg5dHBGVwVIMJfvhz0vX8YcDIJIoeqhTGMWGhknfdpVpJDtjsOM7lcRljMrWMjbpMIzd28V4F5VSmadL5bs1OtVnRfSs2ITdv9mw=='
+
+users_security_admins:
+  dave:
+    ensure: present
+    #uid: 9000
+    gid: users
+    groups:
+      - wheel
+    comment: Dave
     managehome: true
     ssh_authorized_keys:
       key:
