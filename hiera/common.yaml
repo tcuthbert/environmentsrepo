@@ -26,15 +26,15 @@ sudo::sudoers:
       - 'env_keep += "SSH_AUTH_SOCK"'
 
 network_admins:
-    tom:
-        ensure: present
-        uid: 1000
-        gid: staff
-        groups: - wheel
-        comment: John Doe
-        managehome: true
-        ssh_authorized_keys:
-                mykey:
-                        type: 'ssh-rsa'
-                        key:  'mykeydata=='
+  tom:
+    ensure: present
+    uid: 1000
+    gid: staff
+    groups: - wheel
+    comment: John Doe
+    managehome: true
+    ssh_authorized_keys:
+      mykey:
+        type: 'ssh-rsa'
+        key:  'mykeydata=='
 
