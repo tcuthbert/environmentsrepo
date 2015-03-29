@@ -10,7 +10,7 @@ ntp::servers:
 r10k::include_postrun_command: true
   
 sudo::sudoers:
-  network_admin:
+  users_network_admin:
     ensure: present
     comment: "network admin users."
     users:
