@@ -25,7 +25,7 @@ sudo::sudoers:
     defaults:
       - 'env_keep += "SSH_AUTH_SOCK"'
 
-network_admins:
+users_network_admins:
   tom:
     ensure: present
     uid: 9000
