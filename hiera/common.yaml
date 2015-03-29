@@ -28,7 +28,7 @@ sudo::sudoers:
 network_admins:
   tom:
     ensure: present
-    uid: 1000
+    uid: 9000
     gid: staff
     groups:
       - wheel
