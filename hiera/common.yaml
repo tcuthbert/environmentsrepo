@@ -29,7 +29,7 @@ users_network_admins:
   tom:
     ensure: present
     uid: 9000
-    gid: staff
+    gid: users
     groups:
       - wheel
     comment: Thomas Cuthbert
