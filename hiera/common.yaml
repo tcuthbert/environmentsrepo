@@ -30,8 +30,9 @@ network_admins:
     ensure: present
     uid: 1000
     gid: staff
-    groups: - wheel
-    comment: John Doe
+    groups:
+      - wheel
+    comment: Thomas Cuthbert
     managehome: true
     ssh_authorized_keys:
       mykey:
