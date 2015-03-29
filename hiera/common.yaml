@@ -2,6 +2,7 @@
 classes:
   - 'base::apps'
   - 'base::profiles::ntp'
+  - 'netops'
 
 ntp::servers:
   - time.iinet.net.au
