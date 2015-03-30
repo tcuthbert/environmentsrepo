@@ -7,11 +7,6 @@ class base::profiles::r10k_installation {
         'basedir' => "${::settings::confdir}/environments",
         'prefix'  => false,
       },
-      #'hiera'     => {
-        #'remote'  => 'file:///vagrant/config/hierarepo',
-        #'basedir' => "${::settings::confdir}/hiera",
-        #'prefix'  => false,
-      #}
     },
     purgedirs         => ["${::settings::confdir}/environments"],
     manage_modulepath => true,
