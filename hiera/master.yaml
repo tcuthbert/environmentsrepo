@@ -1,0 +1,6 @@
+---
+master_classes:
+  - 'puppet_enterprise::profile::master'
+
+puppet_enterprise::profile::master::enable_ca_proxy: true
+r10k::include_postrun_command: true
