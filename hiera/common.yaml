@@ -40,7 +40,7 @@ sudo::sudoers:
 users_network_admins:
   tom:
     ensure: present
-    password: user_tom_password
+    password: user_tom_password:
     uid: 9000
     gid: users
     groups:
