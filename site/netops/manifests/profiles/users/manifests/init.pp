@@ -1,4 +1,4 @@
 class netops::profiles::users {
   users { network_admins: }
-  include users::paswwords
+  include users::passwords
 }
