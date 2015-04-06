@@ -1,16 +1,14 @@
-class netops::profiles::users {
-  #users { network_admins: }
-  $users = [
-    "tom",
-    "dave",
-    "someguy"
-  ]
+class netops::profiles::users (
+  $users
+){
 
-  user { 'network_admins':
-    name       => $users,
-    ensure     => present,
-    groups     => ['wheel'],
-    managehome => true,
+  define createuser {
+    user { $name:
+      ensure     => present,
+      groups     => ['wheel'],
+      managehome =>  true,
+    }
   }
-  #include users::passwords
+
+  createuser{$users:}
 }
