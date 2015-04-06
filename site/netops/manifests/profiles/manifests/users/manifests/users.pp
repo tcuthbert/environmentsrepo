@@ -1,4 +1,4 @@
-class netops::profiles::users::admins (
+class netops::profiles::users (
   $users
 ){
 
