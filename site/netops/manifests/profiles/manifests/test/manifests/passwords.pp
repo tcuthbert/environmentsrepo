@@ -1,4 +1,4 @@
-class netops::profiles::users::passwords ($user, $hash) {
+class netops::profiles::test::passwords ($user, $hash) {
 
   user { $user:
     password => $hash
