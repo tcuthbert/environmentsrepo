@@ -1,6 +1,6 @@
-class netops::profiles::users::passwords ($hash) {
+class netops::profiles::users::passwords ($user, $hash) {
 
-  user { 'tom':
+  user { $user:
     password => hash
   }
 }
