@@ -1,9 +1,9 @@
-class netops::profiles::users (
+class netops::profiles::users::admins (
   $users
 ){
 
-  $users = parsejson($users)
-  user { $users:
+  $names = split($users, "\ ")
+  user { $names:
     ensure     => present,
     groups     => ['wheel'],
     managehome =>  true,
