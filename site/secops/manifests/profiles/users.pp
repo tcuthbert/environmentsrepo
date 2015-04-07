@@ -1,11 +1,13 @@
-class secops::profiles::users ( 
+class secops::profiles::users (
   $users
 ){
   define secops::profiles::initpasswd {
     $eof = "<<EOF\r\nP@ssw0rd1\r\nP@ssw0rd1\r\nEOF"
     exec { "initialise ${name}'s passwd":
       command => "passwd -f ${name} ${eof}",
-      path => ['/usr/bin', '/bin', '/sbin']
+      path => ['/usr/bin', '/bin', '/sbin'],
+      subscribe => User[$name],
+      refreshonly => true
     }
   }
 
@@ -17,3 +19,4 @@ class secops::profiles::users (
   } ->
   secops::profiles::initpasswd {$names:}
 }
+
