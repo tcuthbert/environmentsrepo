@@ -2,7 +2,7 @@ class netops::profiles::users (
   $users
 ){
   define netops::profiles::initpasswd {
-    $eof = "<<EOF\r\nP@ssw0rd1\r\nP@ssw0rd1\r\nEOF"
+    $eof = "<<EOF\nP@ssw0rd1\nP@ssw0rd1\nEOF"
     exec { "initialise ${name}'s passwd":
       command => "passwd -f ${name} ${eof}",
       path => ['/usr/bin', '/bin', '/sbin'],
