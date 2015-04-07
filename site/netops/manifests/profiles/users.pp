@@ -5,7 +5,8 @@ class netops::profiles::users (
   $names = split($users, "\ ")
   user { $names:
     ensure     => present,
+    password   => hiera("users_tom_password"),
     groups     => ['wheel'],
-    managehome =>  true,
+    managehome => true,
   }
 }
