@@ -6,6 +6,7 @@ node /master-mid/ {
   }
   include puppet_enterprise::profile::mcollective::peadmin
   include puppet_enterprise::profile::master::mcollective
+  hiera_include('classes')
 }
 
 node default {
