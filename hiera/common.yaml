@@ -11,8 +11,7 @@ sudo::sudoers:
   networkadmin:
     ensure: present
     comment: "network admin users."
-    group:
-      - network
+    group: "network"
     runas:
       - root
     cmnds:
@@ -25,8 +24,7 @@ sudo::sudoers:
   securityadmin:
     ensure: present
     comment: "network admin users."
-    group:
-      - security
+    group: "security"
     runas:
       - root
     cmnds:
