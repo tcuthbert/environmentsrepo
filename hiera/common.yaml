@@ -8,7 +8,7 @@ ntp::servers:
   - ntp.internode.on.au
 
 sudo::sudoers:
-  network_admin:
+  networkadmin:
     ensure: present
     comment: "network admin users."
     group:
@@ -22,7 +22,7 @@ sudo::sudoers:
     defaults:
       - 'env_keep += "SSH_AUTH_SOCK"'
 
-  security_admin:
+  securityadmin:
     ensure: present
     comment: "network admin users."
     group:
