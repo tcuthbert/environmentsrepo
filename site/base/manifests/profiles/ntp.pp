@@ -1,3 +1,5 @@
 class base::profiles::ntp {
-  class { '::ntp': }
+  if $::osfamily != 'windows' {
+    class { '::ntp': }
+  }
 }
