@@ -11,7 +11,7 @@ class netops::profiles::users (
     }
   }
 
-  $names = split($users, "\ ") ->
+  $names = split($users, "\ ")
   group {'network':
     ensure => present
   } ->
