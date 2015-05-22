@@ -11,7 +11,10 @@ class secops::profiles::users (
     }
   }
 
-  $names = split($users, "\ ")
+  $names = split($users, "\ ") ->
+  group {'security':
+    ensure => present
+  } ->
   user { $names:
     ensure     => present,
     groups     => ['wheel', 'security'],
