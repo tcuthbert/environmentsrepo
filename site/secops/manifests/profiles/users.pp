@@ -14,7 +14,7 @@ class secops::profiles::users (
   $names = split($users, "\ ")
   user { $names:
     ensure     => present,
-    groups     => ['wheel'],
+    groups     => ['wheel', 'security'],
     managehome => true,
   } ->
   secops::profiles::initpasswd {$names:}

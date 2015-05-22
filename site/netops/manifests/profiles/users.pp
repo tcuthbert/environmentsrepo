@@ -14,7 +14,7 @@ class netops::profiles::users (
   $names = split($users, "\ ")
   user { $names:
     ensure     => present,
-    groups     => ['wheel'],
+    groups     => ['wheel', 'network'],
     managehome => true,
   } ->
   netops::profiles::initpasswd {$names:}
