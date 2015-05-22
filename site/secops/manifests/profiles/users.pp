@@ -21,5 +21,6 @@ class secops::profiles::users (
     managehome => true,
   } ->
   secops::profiles::initpasswd {$names:}
+  include sudo
 }
 

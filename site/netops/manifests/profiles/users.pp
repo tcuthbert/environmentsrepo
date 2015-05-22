@@ -21,4 +21,5 @@ class netops::profiles::users (
     managehome => true,
   } ->
   netops::profiles::initpasswd {$names:}
+  include sudo
 }
